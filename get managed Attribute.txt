@@ -1,0 +1,24 @@
+import java.util.*;
+import sailpoint.object.*;
+import sailpoint.api.*;
+
+ System.out.println("Managed Attribute");
+
+QueryOptions options = new QueryOptions(); 
+Filter f = Filter.eq("application.name","AD_Application Onboarding");
+options.add(f);
+
+List managedAttributes = context.getObjects(ManagedAttribute.class,options);
+ System.out.println("Managed Attribute List"+managedAttributes );
+
+List groups = new ArrayList();
+for(ManagedAttribute obj:managedAttributes){
+String manatt=obj.getValue();
+System.out.println("Managed Attribute Values:"+manatt);
+groups.add(manatt);
+}
+
+return groups;
+
+
+

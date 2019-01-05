@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE QuickLink PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<QuickLink action="external" category="Manage" messageKey="GO TO Debug" name="debugPage" ordering="5">
+  <Attributes>
+    <Map>
+      <entry key="url" value="http://localhost:8080/identityiq/debug/debug.jsf"/>
+    </Map>
+  </Attributes>
+</QuickLink>

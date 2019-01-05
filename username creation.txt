@@ -1,0 +1,8 @@
+String userid=account.getStringAttribute("userid");
+if (userid==null){
+String firstname=account.getStringAttribute("firstname").toLowerCase();
+String lastname=account.getStringAttribute("lastname").toLowerCase();
+
+String userid = firstname+"."+lastname;
+identity.setName(userid);
+}

@@ -1,0 +1,19 @@
+import sailpoint.object.*;
+String status = object.getStringAttribute("Active");
+
+if(status.equals("Active")){
+return object;
+}
+else
+{
+return null;
+}
+
+String id= object.getStringAttribute("id");
+if(status.equals("--End of information")){
+return null;
+}
+else
+{
+return object;
+}

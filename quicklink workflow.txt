@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE QuickLink PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<QuickLink action="workflow" category="Manage" created="1545077026138" id="40283d8167bd876f0167bdc46d5a002c" messageKey="printHello" modified="1545078630629" name="helloWorld" ordering="6">
+  <Attributes>
+    <Map>
+      <entry key="workflowName" value="helloWorld"/>
+    </Map>
+  </Attributes>
+</QuickLink>

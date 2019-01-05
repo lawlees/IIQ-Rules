@@ -1,0 +1,25 @@
+  import java.util.*;
+  import sailpoint.object.*;
+  
+    System.out.println("Hello World"); 
+    QueryOptions qo = new QueryOptions(); 
+  qo.addFilter(Filter.eq("links.application.name","AD_Application Onboarding")); //Dexpert_Application_AD_Provisioning
+  List identitynames = new ArrayList();
+  List sAMAccountNameList = new ArrayList();
+  Iterator itr=context.search(Identity.class,qo); 
+  while(itr.hasNext()) 
+  { 
+    Identity id = (Identity)itr.next(); 
+    if(id.getLinks().size()==1) 
+      identitynames.add(id.getName());
+    String userName=id.getName();
+    //System.out.println(userName); 
+    
+    Identity ident = context.getObjectByName(Identity.class,userName);
+    String sAMAccountName=ident.getStringAttribute("sAMAccountName");//sAMAccountName
+    
+    //String sAMAccountName=id.getDisplayName();
+    sAMAccountNameList.add(sAMAccountName);
+    System.out.println("id : " + sAMAccountName); 
+    
+  } 

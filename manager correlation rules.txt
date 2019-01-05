@@ -1,0 +1,11 @@
+import java.util.Map;
+import java.util.HashMap;
+Map returnMap = new HashMap();
+
+if (managerAttributeValue != null) {
+ returnMap.put("identityAttributeName", "employeeid");
+ returnMap.put("identityAttributeValue", managerAttributeValue);
+} else {
+ returnMap.put("identityName", "");
+}
+return returnMap;

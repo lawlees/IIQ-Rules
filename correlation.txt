@@ -1,0 +1,11 @@
+import java.util.HashMap;
+Map newMap = new HashMap();
+
+String id=account.getStringAttribute("employeeid");
+String id1= id.substring(1);
+String id2= "S"+id1;
+
+
+newMap.put("identityAttributeName","employeeid");// employee id from the identity
+newMap.put("identityAttributeValue",id2);
+return newMap;
